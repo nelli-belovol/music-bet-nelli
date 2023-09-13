@@ -1,0 +1,19 @@
+@import "../../scss/variables.scss";
+
+.container {
+  position: relative;
+  min-height: 100%;
+  max-width: 437px;
+
+  color: $grey-dark;
+  background-color: $bg-main;
+  .bgWhite {
+    border-radius: 0 20px 20px 0;
+    background-color: $white;
+  }
+  .line {
+    border: 4px solid #f5f8fa;
+    margin-right: 16px;
+    margin-top: 8px;
+  }
+}

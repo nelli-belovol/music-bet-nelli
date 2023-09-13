@@ -1,0 +1,121 @@
+@import '../../scss/variables.scss';
+
+.container {
+  background: linear-gradient(175deg, #000035 240px, #002068 100px);
+  height: 1000px;
+  @media (max-width: 1366px) {
+    background: linear-gradient(175deg, #000035 100px, #002068 100px);
+    height: 1200px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1366px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .textWrapper {
+    text-align: start;
+    margin-top: 250px;
+    margin-right: 78px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1366px) {
+      margin: 0;
+      width: 335px;
+      text-align: center;
+    }
+    .titleTransparent {
+      width: 785px;
+      height: 176px;
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 88px;
+      letter-spacing: -0.225px;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      @media (max-width: 1366px) {
+        height: auto;
+        margin: 0;
+        width: 335px;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: -0.09375px;
+        margin-top: 110px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .titleWhite {
+      width: 785px;
+      height: 88px;
+      left: 318px;
+      top: 4620px;
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 88px;
+      letter-spacing: -0.225px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      @media (max-width: 1366px) {
+        height: auto;
+        margin: 0;
+        margin-top: 14px;
+        widows: 335px;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: -0.09375px;
+      }
+    }
+    .text {
+      width: 606px;
+      height: 52px;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 26px;
+      letter-spacing: -0.065625px;
+      text-align: start;
+      margin-left: -179px;
+      margin-top: 39px;
+      @media (max-width: 1366px) {
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 32px;
+        font-size: 14px;
+        line-height: 24px;
+        width: 335px;
+      }
+    }
+  }
+}
+
+.topPlayerImg {
+  max-width: 493px;
+  max-height: 661px;
+  margin-top: 250px;
+  @media (max-width: 1366px) {
+    max-width: 347px;
+    max-height: 465px;
+    margin: 0;
+  }
+}
+
+.testimonia {
+  margin-top: 60px;
+  margin-right: 53px;
+  @media (max-width: 1366px) {
+    display: none;
+  }
+}
+
+.testimoniaMobile {
+  display: none;
+  @media (max-width: 1366px) {
+    display: block;
+    margin-top: 32px;
+  }
+}

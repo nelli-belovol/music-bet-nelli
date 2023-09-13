@@ -1,0 +1,168 @@
+@import '../../scss/variables.scss';
+
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    /* identical to box height, or 156% */
+     @media (min-width: 431px) {
+        display: none;
+      }
+
+    color: #2B3134;
+  }
+.container {
+  padding: 20px 20px 168px 20px;
+  width: 100%;
+  padding-bottom: 168px;
+  @media (max-width: 430px) {
+    // width: 390px;
+    margin: 0;
+    padding: 0 0 268px 0;
+    // border-radius: 20px;
+  }
+  .bgHeader {
+    position: relative;
+    height: 218px;
+    border-radius: 20px;
+    background: transparent;
+    z-index: 2;
+    background-repeat: no-repeat;
+
+    .avatar {
+      width: 190px;
+      height: 190px;
+      z-index: 3;
+      margin-top: 86px;
+      margin-left: 38px;
+      border-radius: 15px;
+      @media (max-width: 430px) {
+        width: 95px;
+        height: 95px;
+        margin-top: 13px;
+        margin-left: 13px;
+      }
+    }
+  }
+
+  .menuWrapper {
+    margin-left: 36px;
+    margin-top: 30px;
+
+    @media (max-width: 430px) {
+      display: none;
+    }
+  }
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    .name {
+      margin-left: 250px;
+      margin-top: -200px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 51px;
+      letter-spacing: -0.13125px;
+      @media (max-width: 430px) {
+        margin: -110px 0 10px 120px;
+        max-width: 200px;
+        overflow: hidden;
+        font-size: 21px;
+        white-space: nowrap;
+      }
+    }
+    .userInfo {
+      margin-left: 250px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      @media (max-width: 430px) {
+        margin: 0 0 0 120px;
+        max-width: 200px;
+        overflow: hidden;
+        font-size: 16px;
+        height: 45px;
+      }
+    }
+  }
+  .rightHeaderInfoWrapper {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -110px;
+    margin-left: auto;
+    gap: 35px;
+    padding-right: 20px;
+    @media (max-width: 430px) {
+      margin-left: 0;
+      margin-top: 40px;
+      padding-right: 0px;
+    }
+
+    .tknInfoWrapper {
+      display: flex;
+      gap: 39px;
+    }
+  }
+  .logo {
+    height: 58px;
+    margin-left: 130px;
+    @media (max-width: 430px) {
+      display: none;
+    }
+  }
+  .tknWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconWrapper {
+    display: flex;
+    img {
+      margin-right: 8px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      color: $white;
+    }
+  }
+  .tknTitle {
+    color: $light-blue;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 11px;
+  }
+  .income {
+    color: $lightGreen;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 11px;
+  }
+  .accountWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 113px;
+    height: 60px;
+    border: 1px solid $white;
+  }
+  .account {
+    margin-bottom: 11px;
+  }
+  .children {
+    margin-left: 250px;
+    margin-top: -210px;
+    @media (max-width: 430px) {
+      margin: -160px 0 0 -14px;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import '../../scss/variables.scss';
+
+input { -webkit-user-select:text;}
+
+
+.container {
+  // height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135.17deg, #002068 0.29%, #000035 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+  @media (max-width: 1200px) {
+  }
+  .loginWrapper {
+    border-radius: 20px 0px 0px 20px;
+    width: 418px;
+    height: 606px;
+    background-color: $white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1200px) {
+      border-radius: 20px 20px 0 0;
+    }
+
+    @media (max-width: $size-s) {
+      border-radius: 20px;
+    }
+  }
+  .logo {
+    width: 88px;
+    height: 130px;
+    margin-top: 39px;
+  }
+  .title {
+    margin-top: 68px;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+    color: $text-blue;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+  .text {
+    width: 235px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text-blue;
+  }
+  .inputData {
+    margin-top: 22px;
+    width: 320px;
+    height: 45px;
+    background: $white;
+    mix-blend-mode: normal;
+    border: 1px solid $bg-main;
+    border-radius: 10px;
+    padding-left: 18px;
+    margin-bottom: 32px;
+    ::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $bg-main;
+    }
+  }
+  .info {
+    position: relative;
+    background-image: url(../../assets/cards/bg.svg);
+    background-repeat: no-repeat;
+    height: 606px;
+    width: 725px;
+    @media (max-width: 1200px) {
+      width: 418px;
+    }
+  }
+}
+.txtWrapper {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: $white;
+  margin-bottom: 45px;
+  @media (max-width: 1200px) {
+    > p {
+      font-size: 16px;
+    }
+  }
+}
+.absolutePosition {
+  position: absolute;
+  top: 139px;
+  left: 132px;
+  @media (max-width: 1200px) {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+.icon {
+  margin-right: 27px;
+  @media (max-width: 1200px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+.invisible {
+  display: none;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}

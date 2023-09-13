@@ -1,0 +1,47 @@
+@import '../../scss/variables.scss';
+
+.container {
+  padding: 20px 20px 100px 20px;
+
+  @media screen and (max-width: 370px) {
+    padding: 10px 10px 100px 10px;
+  }
+  @media screen and (max-width: $size-m) {
+    padding-bottom: 190px;
+  }
+  .btnsWrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    @media (max-width: 870px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .activeBtn {
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 44px;
+      color: $grey-dark;
+      width: 258px;
+      height: 50px;
+      background-color: $white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+    }
+    .notActiveBtn {
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 44px;
+      color: $grey-dark;
+      width: 258px;
+      height: 50px;
+      background-color: $bg-second;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+}

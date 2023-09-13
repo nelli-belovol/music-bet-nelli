@@ -1,0 +1,182 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  width: 176px;
+  // height: 224px;
+  background: $white;
+  border: 1px solid $cream;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+  border-radius: 15px;
+
+  @media screen and (max-width: $size-s) {
+    // padding-left: 10px;
+    margin-right: 10px;
+    max-width: 185px;
+
+  }
+
+
+  @media screen and (max-width: 370px) {
+    // padding-left: 10px;
+    margin-right: 10px;
+    max-width: 160px;
+
+  }
+  // &:hover {
+  //   height: 255px;
+  //   > hr {
+  //     display: block;
+  //   }
+  //   .buyNowBlock {
+  //     margin-top: 8px;
+  //   }
+  // }
+
+  > hr {
+    display: none;
+    margin-top: 8px;
+    border: 1px solid $cream;
+  }
+
+  > figure {
+    width: 176px;
+    height: 176px;
+    position: relative;
+
+    @media screen and (max-width: $size-s) {
+      width: 100%;
+    }
+    .soldPlaceholder {
+      position: absolute;
+      bottom: 0;
+      padding-left: 10px;
+      padding-top: 8px;
+      height: 47px;
+      width: 176px;
+      background: #00B2FD;
+      opacity: 0.9;
+      color: white;
+
+      text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+      font-weight: 600;
+      font-size: 15.5593px;
+      line-height: 19px;
+
+      @media screen and (max-width: $size-s) {
+        width: 100%;
+      }
+    }
+
+    > img {
+      border-radius: 15px 15px 0 0;
+      display: block;
+      width: 174px;
+      height: 174px;
+
+      @media screen and (max-width: $size-s) {
+        width: 100%;
+      }
+    }
+
+    > h3 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: $white;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      width: 170px;
+      height: 19px;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+    }
+
+    > h4 {
+      position: absolute;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      text-align: center;
+      color: white;
+      width: 170px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      top: 34px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 14px;
+      overflow: hidden;
+    }
+
+    .playerBtn {
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+
+  > article {
+    > div {
+      display: flex;
+      justify-content: space-between;
+      margin: 6px 8px 3px 8px;
+
+      > h4 {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $bg-main;
+        opacity: 0.4;
+        height: 12px;
+        overflow: hidden;
+        &:first-child {
+          max-width: 110px;
+        }
+      }
+
+      > h3 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $bg-main;
+        &:first-child {
+          max-width: 110px;
+        }
+      }
+    }
+  }
+
+  .buyNowBlock {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 18px;
+    cursor: pointer;
+
+    > img {
+      width: 11px;
+      height: 12px;
+      display: block;
+    }
+
+    > p {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $text-blue;
+    }
+  }
+}

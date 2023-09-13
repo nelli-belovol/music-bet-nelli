@@ -1,0 +1,109 @@
+@import "../../scss/variables.scss";
+
+.logoWrapper {
+    text-align: center;
+    padding-top: 33px;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-bottom: 71px;
+}
+.container {
+  background-color: #000035;
+
+  max-width: 316px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  top: 0;
+  left: 0;
+  .menuWrapper {
+    margin-bottom: 30px;
+  }
+  .logo {
+    margin: 0;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+  }
+}
+.elementMenu {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  opacity: 0.5;
+  color: $white;
+  margin: 5px 0 5px 26px;
+}
+.rightsWrapper {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  .iconsShape {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .textWrapper {
+    display: flex;
+    gap: 8px;
+  }
+  .text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: $white;
+    opacity: 0.35;
+  }
+}
+.activeIcon * {
+  display: block;
+  fill: $white;
+}
+.icon * {
+  display: block;
+  fill: $white;
+  opacity: 0.6;
+}
+.ActiveElementMenu {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  color: $white;
+  margin: 5px 0 5px 26px;
+}
+.linkElement {
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  &:hover {
+    background-color: $transparentMenu;
+  }
+}
+.activeLinkElement {
+  display: flex;
+  align-items: center;
+  background-color: $transparentMenu;
+}
+
+.activeBlockLink {
+  height: 39px;
+  background: linear-gradient(135.17deg, #00e476 0.29%, #00b2fd 47.83%, #0074f0 100%);
+  border-radius: 0px 5px 5px 0px;
+  width: 10px;
+  margin-right: 27px;
+}
+.blockLink {
+  margin-right: 37px;
+}
+.webLink {
+  cursor: pointer;
+}

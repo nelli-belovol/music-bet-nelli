@@ -1,0 +1,77 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  flex-direction: column;
+  // @media (max-width: $size-l) {
+    > div {
+      margin-right: 10px;
+    }
+  // }
+  .textWrapper {
+    display: flex;
+    justify-content: space-between;
+    color: $grey-dark;
+    .offers {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 44px;
+      margin-left: 20px;
+    }
+    .seeMore {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      margin-right: 20px;
+    }
+  }
+  .swiper {
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: $size-s) {
+      flex-wrap: wrap;
+      justify-content: baseline;
+      > div {
+        width: 100%;
+        flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+        // flex-basis: 50%;
+        /*demo*/
+        margin-bottom: 10px;
+        margin-right: 0px;
+      }
+    }
+    // justify-content: center;
+    // overflow: scroll;
+    .wrapper {
+      width: 1000px;
+      height: 260px;
+    }
+    .next {
+      background-image: url('../../../assets/explore/nav-scroll.svg');
+      width: 66px;
+      height: 256px;
+      cursor: pointer;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .prev {
+      width: 66px;
+      height: 256px;
+      cursor: pointer;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sl {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,94 @@
+@import '../../../scss/variables.scss';
+
+// ul
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+// li
+.wrapper {
+  padding: 0 10px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  &:hover {
+    background: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+    border-radius: 15px;
+  }
+
+  .artistWrapper {
+    display: flex;
+    max-width: 150px;
+    flex-direction: column;
+
+    .title {
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $grey-dark;
+    }
+    .artist {
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $grey-dark;
+      opacity: 0.6;
+    }
+  }
+  .ownerWrapper {
+    display: flex;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $grey-dark;
+  }
+  .pointsWrapper {
+    display: flex;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $grey-dark;
+  }
+  .walletWrapper {
+    display: flex;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $grey-dark;
+  }
+  .currentTKNWrapper {
+    display: flex;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $grey-dark;
+  }
+
+  .menu * {
+    cursor: pointer;
+    fill: $grey-dark;
+    opacity: 0.6;
+  }
+  .icon * {
+    fill: $grey-dark;
+    opacity: 0.6;
+  }
+}

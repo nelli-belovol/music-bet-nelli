@@ -1,0 +1,48 @@
+@import '../../../scss/variables.scss';
+
+.activeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 190px;
+  height: 35px;
+  background-color: $bg-main;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.203375);
+  border-radius: 10px;
+  cursor: pointer;
+  .activeText {
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+    font-weight: 600;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  width: 190px;
+  height: 35px;
+  background-color: $white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.203375);
+  border-radius: 10px;
+  border: none;
+
+  .text {
+    font-size: 14px;
+    line-height: 17px;
+    color: $bg-main;
+    font-weight: 600;
+  }
+}
+.activeIcon * {
+  fill: $white;
+  display: block;
+}
+.icon * {
+  display: block;
+  fill: $bg-main;
+}

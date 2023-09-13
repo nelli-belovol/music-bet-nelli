@@ -1,0 +1,21 @@
+@import "./scss/variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  user-select: none;
+}
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+//   outline: 1px solid red;
+// }
+
+.body {
+  position: relative;
+}

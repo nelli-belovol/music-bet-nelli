@@ -1,0 +1,244 @@
+.container {
+    position: relative;
+}
+.path {
+    position: absolute;
+    top: 10px;
+    opacity: 0.6;
+    width: 100%;
+}
+.hidden {
+    height: 100%;
+    width: 100%;
+    background-color:  #000035;
+    overflow: hidden;
+    z-index:1;
+    position: absolute;
+    border-radius: 30px;
+
+    @media screen and (max-width: 430px) {
+      border-radius: 18px;
+    }
+}
+
+.hiddenExplore {
+  @extend .hidden;
+
+  border-radius: 20px;
+
+  background-color: white;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+}
+
+.blobBackground {
+  background: linear-gradient(135.17deg, #002068 0.29%, #000035 100%);
+}
+
+.blobBackgroundExplore {
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+}
+
+.blob2 {
+  @extend .blobBackground;
+
+  left: 400px !important;
+  width: 78px;
+  height: 78px;
+  border-radius: 58px;
+  left: 997px;
+  top: 117px;
+
+  mix-blend-mode: normal;
+  opacity: 0.95;
+  background-color:black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: 50% 50%;
+  animation: moveit 16s ease-in-out infinite;
+}
+.blob3 {
+  @extend .blobBackground;
+
+  left: 200px !important;
+  right: 0;
+  width: 58px;
+height: 58px;
+  border-radius: 58px;
+top: 117px;
+
+mix-blend-mode: normal;
+opacity: 0.95;
+  background-color:black;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 50% 50%;
+    animation: moveitttttt 16s ease-in-out infinite;
+}
+
+.blob {
+  @extend .blobBackground;
+
+  width: 58px;
+height: 58px;
+  border-radius: 58px;
+left: 997px;
+top: 117px;
+
+mix-blend-mode: normal;
+opacity: 0.95;
+  background-color:black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: 50% 50%;
+  animation: move 16s ease-in-out infinite;
+}
+
+.blob4 {
+  @extend .blobBackground;
+
+  right: 0;
+  top: 200px;
+  width: 58px;
+height: 58px;
+  border-radius: 58px;
+top: 117px;
+
+mix-blend-mode: normal;
+opacity: 0.95;
+  background-color:black;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 50% 50%;
+    animation: moveittt 16s ease-in-out infinite;
+}
+.blob5 {
+  @extend .blobBackground;
+
+  right: 200px;
+  bottom: 200px;
+  width: 38px;
+height: 38px;
+  border-radius: 38px;
+top: 117px;
+
+mix-blend-mode: normal;
+opacity: 0.95;
+  background-color:black;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 50% 50%;
+    animation: moveitttt 16s ease-in-out infinite;
+}
+.blob6 {
+  @extend .blobBackground;
+
+  left: 200px;
+  bottom: 200px;
+  width: 98px;
+  height: 98px;
+  border-radius: 98px;
+  top: 117px;
+
+  mix-blend-mode: normal;
+  opacity: 0.95;
+  background-color:black;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 50% 50%;
+  animation: moveittttt 16s ease-in-out infinite;
+}
+
+.blobb {
+  @extend .blob;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+.blobb2 {
+  @extend .blob2;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+.blobb3 {
+  @extend .blob3;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+.blobb4 {
+  @extend .blob4;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+.blobb5 {
+  @extend .blob5;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+.blobb6 {
+  @extend .blob6;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(1)   translate(80px, 30px) rotate(160deg); }
+  40%  { transform: scale(1)   translate(80px, 30px) rotate(160deg); }
+  78%  { transform: scale(1)   translate(0px, 50px) rotate(-20deg); }
+  80%  { transform: scale(1)   translate(0px, 50px) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+
+@keyframes moveit {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(1)   translate(80px, 30px) rotate(160deg); }
+  40%  { transform: scale(1)   translate(80px, 30px) rotate(160deg); }
+  78%  { transform: scale(1)   translate(0px, 50px) rotate(-20deg); }
+  80%  { transform: scale(1)   translate(0px, 50px) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+
+@keyframes moveittt {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(1)   translate(-20px, -20px); }
+  40%  { transform: scale(1)   translate(-20px, -20px); }
+  78%  { transform: scale(1)   translate(-260px, 40px);  }
+  80%  { transform: scale(1)   translate(-260px, 40px);  }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+@keyframes moveitttt {
+  0%   { transform: scale(1)   translate(-50px, 50px); }
+  38%  { transform: scale(1)   translate(-40px, -40px); }
+  40%  { transform: scale(1)   translate(-40px, -40px); }
+  78%  { transform: scale(1)   translate(-160px, 40px);  }
+  80%  { transform: scale(1)   translate(-160px, 40px);  }
+  100% { transform: scale(1)   translate(-50px, 50px); }
+}
+@keyframes moveittttt {
+  0%   { transform: scale(1)   translate(50px, 50px); }
+  38%  { transform: scale(1)   translate(-40px, -40px); }
+  40%  { transform: scale(1)   translate(-40px, -40px); }
+  78%  { transform: scale(1)   translate(-160px, 40px);  }
+  80%  { transform: scale(1)   translate(-160px, 40px);  }
+  100% { transform: scale(1)   translate(50px, 50px); }
+}
+@keyframes moveitttttt {
+  0%   { transform: scale(1)   translate(70px, 50px); }
+  38%  { transform: scale(1)   translate(40px, -40px); }
+  40%  { transform: scale(1)   translate(40px, -40px); }
+  78%  { transform: scale(1)   translate(160px, 40px);  }
+  80%  { transform: scale(1)   translate(160px, 40px);  }
+  100% { transform: scale(1)   translate(70px, 50px); }
+}

@@ -1,0 +1,30 @@
+@import "../../scss/variables.scss";
+.container {
+  color: $grey-dark;
+  background: #f5f8fa;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+  border-radius: 15px;
+  padding: 14px 0;
+  margin-top: 11px;
+  & > h3 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.57;
+    margin-left: 43px;
+  }
+
+  .articlesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(511px, max(511px, 50%)), 511px));
+    grid-column-gap: 60px;
+    grid-row-gap: 21px;
+    justify-content: center;
+    color: #222222;
+    margin-top: 21px;
+
+    .article {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

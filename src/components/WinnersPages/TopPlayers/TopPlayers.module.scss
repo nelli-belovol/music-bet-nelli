@@ -1,0 +1,95 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 34px;
+  grid-row-gap: 17px;
+
+  @media (max-width: 870px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  padding: 0 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+		background: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.203375);
+    border-radius: 15px;
+  }
+  .coverWrapper {
+    position: relative;
+    display: flex;
+    padding-right: 10px;
+    .cover {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+    .nameWrapper {
+      position: absolute;
+      top: -15px;
+      left: 40px;
+      display: flex;
+      align-items: flex-end;
+
+      @media (max-width: 430px) {
+        top: -18px;
+      }
+      .place {
+        font-weight: 600;
+        font-size: 16.9091px;
+        line-height: 21px;
+        color: $blue;
+        width: 31px;
+        height: 31px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+      }
+      .name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: $grey-dark;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .pointsWrapper {
+    display: flex;
+		width: 100px;
+    gap: 9px;
+    .points {
+    }
+  }
+
+  .HFTWrapper {
+    display: flex;
+		width: 100px;
+    gap: 9px;
+    .NFT {
+    }
+  }
+  .TKNWrapper {
+    display: flex;
+		width: 100px;
+    gap: 9px;
+    .TKN {
+    }
+  }
+}

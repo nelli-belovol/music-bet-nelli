@@ -1,0 +1,21 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  cursor: pointer;
+  width: 209px;
+  height: 46px;
+  border-radius: 10px;
+  z-index: 2;
+  @media (max-width: $size-s) {
+    width: 255px;
+    height: 46px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.05px;
+    text-align: center;
+  }
+}

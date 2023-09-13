@@ -1,0 +1,162 @@
+@import '../../scss/variables.scss';
+.container {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 100px 20px;
+  padding-bottom: 200px;
+  .bgMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 22px;
+    background-image: url('./bgGlobal.svg');
+    background-color: $blue-dark;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 86px 51px;
+
+    @media screen and (max-width: 430px) {
+      padding: 15px;
+      flex-direction: column;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 430px) {
+        flex-direction: column;
+      }
+
+    }
+
+    & > h3 {
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 1.21;
+      letter-spacing: -0.13125px;
+      color: $white;
+
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .description {
+      // width: 400px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 14px;
+    }
+
+    .searchContainer {
+      display: flex;
+      flex-direction: row;
+      margin-top: 40px;
+
+      @media screen and (max-width: 430px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .search {
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: $bg-main;
+        height: 45px;
+        min-width: 457px;
+        outline: none;
+        padding: 14px 18px;
+        margin-right: 16px;
+
+        @media screen and (max-width: 430px) {
+          min-width: 40px;
+          width: 100%;
+          margin-right: 0px;
+          margin-bottom: 10px;
+        }
+      }
+
+      & > button {
+        justify-content: space-around;
+        width: 186px;
+        height: 46px;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.253844);
+        border-radius: 10px;
+
+        & > span {
+          margin-left: 0;
+        }
+
+        & > div {
+          top: 11px;
+          left: 135px;
+        }
+      }
+    }
+  }
+
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(263px, max(263px, 100%/4)), 263px)
+    );
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    justify-content: center;
+    background: $bg-card;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+    border-radius: 15px;
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .bannerContactUs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./banner.svg');
+    background-color: $blue-dark;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+    border-radius: 15px;
+    padding: 34px 51px;
+    margin-top: 10px;
+
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .text {
+        width: 397px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 1.21;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-right: 34px;
+      }
+      & > button {
+        justify-content: space-around;
+        width: 279px;
+        height: 56px;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.253844);
+        border-radius: 10px;
+
+        & > span {
+          margin-left: 0;
+        }
+
+        & > div {
+          top: 16px;
+          left: 195px;
+        }
+      }
+    }
+  }
+}

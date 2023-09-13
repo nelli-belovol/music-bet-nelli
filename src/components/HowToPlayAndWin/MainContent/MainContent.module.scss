@@ -1,0 +1,93 @@
+@import '../../../scss/variables.scss';
+
+.mainContent {
+  max-width: 1920px;
+  color: $white;
+  margin: 0 auto;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      margin-top: 265px;
+      max-width: 56%;
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 88px;
+      text-align: center;
+      letter-spacing: -0.225px;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      @media (max-width: 1500px) {
+        font-size: 62px;
+        margin-top: 200px;
+      }
+      @media (max-width: 1350px) {
+        font-size: 52px;
+        letter-spacing: -0.09375px;
+        line-height: 50px;
+        margin-bottom: -10px;
+      }
+      @media (max-width: 620px) {
+        font-size: 42px;
+        letter-spacing: -0.09375px;
+        line-height: 50px;
+        margin-bottom: -10px;
+      }
+      // @media (max-width: 1350px) {}
+      // @media (max-width: 1350px) {}
+      @media (max-width: $size-s) {
+        margin-top: 200px;
+        font-size: 30px;
+        letter-spacing: -0.09375px;
+        line-height: 37px;
+        max-width: 60%;
+      }
+    }
+    .text {
+      margin-top: 28px;
+      max-width: 35%;
+      height: 52px;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: -0.065625px;
+      @media (max-width: 1500px) {
+        max-width: 257px;
+        height: 72px;
+        left: 68px;
+        top: 346px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.04375px;
+      }
+    }
+    .btnBlock {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      width: 610px;
+      @media (max-width: 620px) {
+        margin-top: -28px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      @media (max-width: 620px) {
+        margin-top: 90px;
+      }
+    }
+    .arrowDown {
+      cursor: pointer;
+      margin-top: 140px;
+      @media (max-width: $size-s) {
+        width: 40;
+        height: 70px;
+        margin-top: 140px;
+      }
+    }
+  }
+}

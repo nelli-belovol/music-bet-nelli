@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+}
+
+.border {
+  animation-duration: 1s;
+  animation-name: border-animation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @media (max-width: 595px) {
+    height: 255px;
+    width: 205px;
+  }
+}
+
+@keyframes border-animation {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.children {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

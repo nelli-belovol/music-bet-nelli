@@ -1,0 +1,54 @@
+@import "../../scss/variables.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  @media (max-width: 1200px) {
+    justify-content: flex-start;
+    padding: 0 0 0 10px;
+  }
+
+  @media screen and (max-width: 415px) {
+    background-color: white;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (min-width: 430) and (max-width: 600px) {
+    background: radial-gradient(34.12% 34.12% at 49.08% 47.62%, #004F80 0%, #000035 100%);
+  }
+
+  .controlWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 44px;
+    color: $grey-dark;
+
+    @media (max-width: 1200px) {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .notification {
+    margin-left: 40px;
+  }
+
+  .language {
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-dark;
+  }
+}

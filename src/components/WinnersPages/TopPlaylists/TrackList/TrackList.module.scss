@@ -1,0 +1,78 @@
+@import '../../../../scss/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+  margin-left: -5%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 10px;
+  width: 90%;
+
+  &:hover {
+    background: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .number {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: $grey-dark;
+    width: 20px;
+  }
+
+  .artistWrapper {
+    max-width: 150px;
+    flex: 60%;
+    margin-right: auto;
+    > div {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $grey-dark;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $grey-dark;
+      opacity: 0.6;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .iconWrapper {
+    display: flex;
+    gap: 9px;
+    display: flex;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2b3134;
+  }
+
+  .icon * {
+    fill: $grey-dark;
+    opacity: 0.6;
+  }
+
+  .menu * {
+    fill: $grey-dark;
+    opacity: 0.6;
+  }
+}

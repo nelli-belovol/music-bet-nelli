@@ -1,0 +1,102 @@
+@import '../../../../scss/variables.scss';
+
+.container {
+  background: $white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20091);
+  border-radius: 15px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px;
+
+  > button {
+  }
+  .cover {
+    display: block;
+    width: 60px;
+    height: 60px;
+
+  }
+
+  .player * {
+    width: 22px;
+    height: 23px;
+    fill: #00b2fd;
+    cursor: pointer;
+  }
+
+  .actorWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 150px;
+    color: $grey-dark;
+
+    @media (max-width: $size-s) {
+      width: auto;
+      max-width: 83px;
+    }
+    .title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      opacity: 0.6;
+    }
+  }
+
+  .iconWrapper {
+    display: flex;
+    gap: 8px;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: auto;
+    > p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $grey-dark;
+    }
+  }
+
+  .btn {
+    width: 95px;
+    height: 39px;
+    background-color: $white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20091);
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: $bg-main;
+    .sign {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    .word {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  .more {
+    cursor: pointer;
+  }
+}

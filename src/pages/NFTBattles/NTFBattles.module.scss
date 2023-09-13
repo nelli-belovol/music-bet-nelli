@@ -1,0 +1,403 @@
+@import "../../scss/variables.scss";
+
+.pulsate {
+  width: 100%;
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.bgMain {
+  border-radius: 20px;
+
+  @media screen and (min-width: $size-m) {
+    // padding-bottom: 179px;
+  }
+  @media screen and (max-width: $size-m) {
+    // background-image: url("./bg-globalMobile.svg");
+    background-color: $blue-dark;
+    background-repeat: no-repeat;
+    background-size: contain;
+    // padding-bottom: 176px;
+    width: 100%;
+    height: auto;
+  }
+}
+.bg {
+  z-index: 2;
+
+  position: relative;
+  // background-image: url("./bg.svg");
+  // background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  padding: 30px;
+
+  @media screen and (max-width: $size-m) {
+    background-color: none;
+    background-image: none;
+    padding: 13px 24px;
+  }
+
+  .roundList {
+    display: flex;
+    z-index: 2;
+
+    .roundItem {
+      position: relative;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 62px;
+      }
+
+      .round {
+        height: 51px;
+        width: 51px;
+        border-radius: 15px;
+        background: $blue;
+        font-size: 34.9513px;
+        line-height: 1.23;
+        text-align: center;
+        padding: 4px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .roundText {
+        position: absolute;
+        top: 5px;
+        right: -42px;
+        height: 20px;
+        width: 59px;
+        border-radius: 4px;
+        font-size: 12.9449px;
+        line-height: 1.236;
+        text-align: center;
+        background: $blue-light;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .flexMainContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    .info {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1.21;
+      margin-top: 14px;
+      color: $white;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      width: auto;
+      max-width: 430px;
+      text-align: left;
+      z-index: 1;
+
+      > h2 {
+        font-size: 42px;
+        text-transform: uppercase;
+        letter-spacing: -0.13125px;
+        @media (max-width: 1200px) {
+          font-size: 30px;
+          line-height: 37px;
+        }
+      }
+
+      > div {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $white;
+        margin-top: 8px;
+        @media (max-width: $size-m) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .currentOptions {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @media (max-width: $size-m) {
+        display: none;
+      }
+      .genresSelectText {
+        position: absolute;
+        top: -38px;
+        right: 0px;
+        text-transform: uppercase;
+        text-align: right;
+        width: 107px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.21;
+        text-align: right;
+        text-transform: uppercase;
+        opacity: 0.65;
+      }
+
+      .currentRoundNumber {
+        font-weight: 600;
+        font-size: 200px;
+        line-height: 0.75;
+        letter-spacing: -0.625px;
+        color: #ffffff;
+        margin-top: 20px;
+        z-index: 2;
+      }
+    }
+    .currentRoundText {
+      position: relative;
+      top: 31px;
+      left: 0px;
+      display: inline-block;
+      width: 37px;
+      height: 109px;
+      padding: 4px;
+      background: #00b2fd;
+      border-radius: 7px;
+      writing-mode: vertical-rl;
+      transform: scale(-1);
+      margin-right: 5px;
+    }
+  }
+
+  .navigate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 37px;
+
+    @media screen and (max-width: $size-l) {
+      flex-direction: column;
+    }
+    .buttonsContainer {
+      display: flex;
+      flex-direction: row;
+      max-width: 550px;
+      :not(:last-child) {
+        margin-right: 14px;
+      }
+      > button {
+        width: 283px;
+        height: 62px;
+        > span {
+          font-size: 16px;
+        }
+      }
+
+      > button:nth-child(3) {
+
+        @media screen and (max-width: $size-s) {
+          padding-top: 10px;
+        }
+      }
+    }
+    .bottomContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      @media screen and (max-width: $size-m) {
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+      .navigateScroll {
+        width: 41px;
+        height: 41px;
+        fill: white;
+        margin-right: 27px;
+      }
+    }
+  }
+
+  .animatedArrows {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    left: 250px;
+    margin-top: 40px;
+    width: 257px;
+    height: 252px;
+    & * {
+      position: absolute;
+      display: block;
+    }
+
+    & > :first-child {
+      width: 257px;
+      height: 252px;
+      top: 0px;
+      left: 0px;
+    }
+    & > :nth-child(2) {
+      width: 257px;
+      height: 252px;
+      top: 0px;
+      left: 70px;
+    }
+    & > :nth-child(3) {
+      width: 257px;
+      height: 252px;
+      top: 0px;
+      left: 140px;
+    }
+    & > :nth-child(4) {
+      width: 257px;
+      height: 252px;
+      top: 0px;
+      left: 210px;
+    }
+
+    @media screen and (max-width: $size-l) {
+      display: none;
+    }
+    @keyframes arrow-left {
+      0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+      }
+      25% {
+        transform: translate(60px, 0px);
+        opacity: 0.1;
+      }
+      50% {
+        transform: translate(100px, 0px);
+        opacity: 0.2;
+      }
+      75% {
+        transform: translate(160px, 0px);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translate(240px, 0px);
+        opacity: 1;
+      }
+    }
+
+    .arrowImg {
+      animation: arrow-left 1s ease-out infinite;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    margin-right: 55px;
+
+    @media screen and (max-width: $size-l) {
+      margin-right: 0;
+    }
+
+    .optionsName {
+      mix-blend-mode: normal;
+      opacity: 0.65;
+    }
+
+    .optionsValue {
+      display: inline-block;
+      width: 87px;
+      border: 1px solid #ffffff;
+      filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.5));
+      padding: 4px;
+      text-align: right;
+      text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+      margin-left: 5px;
+    }
+  }
+
+  .genresSelect {
+    width: 170px;
+    height: 46px;
+    z-index: 5;
+    color: $white;
+    outline: none;
+    border: 1.28136px solid $white;
+    padding-left: 12px;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("../../../public/image/NTFBattles/PathDown.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+    @media (max-width: $size-m) {
+      display: none;
+    }
+    & * {
+      background-color: $blue;
+    }
+  }
+}
+
+.bgBattles {
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 386px;
+  cursor: move;
+  background: linear-gradient(135.17deg, #00B2FD 0.29%, #0074F0 13.23%, #000035 100%);
+  border-radius: 25px;
+  overflow-y: scroll;
+  direction: ltr;
+  scrollbar-gutter: stable;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  height: 291px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @extend .bg;
+
+  @media screen and (max-width: $size-m) {
+    padding: 0 0px;
+    // border-radius: 0px;
+    height: 423px;
+    
+  }
+}
+
+.battleListWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  margin-bottom: 100px;
+}

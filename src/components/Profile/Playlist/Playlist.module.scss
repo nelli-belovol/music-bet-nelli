@@ -1,0 +1,156 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 35px;
+  grid-row-gap: 33px;
+}
+
+.btnWrapper {
+  margin-top: 13px;
+  margin-bottom: 27px;
+}
+
+
+.songTitle {
+  position: absolute;
+  height: 57px;
+  width: 57px;
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-weight: 700;
+  line-height: 20px; 
+
+  @media (max-width: $size-s) {
+    height: 47px;
+    width: 47px;
+    left: 12px;
+    top: 12px;
+  }
+
+}
+
+.playlistContainer {
+  margin-bottom: 60px;
+  .newPlaylist {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .playlistName {
+      position: relative;
+      top: 0;
+      left: 61px;
+      background: $playlist;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196314);
+      border-radius: 12px 12px 0px 0px;
+      width: 140px;
+      text-align: center;
+      height: 100px;
+
+      @media (max-width: $size-s) {
+        left: 34px;
+      }
+
+      > span {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        color: $white;
+      }
+    }
+    .newPlaylistWrapper {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      background: $white;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196314);
+      border-radius: 12px;
+      width: 201px;
+      height: 182px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 10px;
+      padding: 10px 15px;
+
+      @media (max-width: $size-s) {
+        width: 174px;
+      }
+
+
+      .example {
+        border-radius: 15px;
+        display: block;
+        width: 78px;
+        height: 78px;
+        @media (max-width: $size-s) {
+          width: 68px;
+          height: 68px;   
+        }
+      }
+    }
+  }
+  .infoWrapper {
+    display: flex;
+    flex-direction: row;
+    .currentNumber {
+      position: relative;
+      top: 0;
+      left: 220px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $bg-main;
+    }
+    .inputPlaylist {
+      position: relative;
+      width: 362px;
+      height: 40px;
+      top: 30px;
+      left: 220px;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 26px;
+      color: $bg-main;
+      background: $white;
+      border-radius: 10px;
+      padding: 7px 13px 7px 13px;
+      border: none;
+      outline: none;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196314);
+    }
+  }
+}
+
+.playlistsHoversContainer {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  @media (max-width: $size-s) {
+    margin-left: 6px;
+    justify-content: center;
+  }
+
+
+  > div {
+    @media (max-width: $size-s) {
+      width: 174px;
+    }
+
+    margin-top: 25px;
+    width: 201px;
+    height: 182px;
+  }
+}
+.songWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}

@@ -1,0 +1,319 @@
+@import "../../../scss/variables.scss";
+
+.container {
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  width: 333.7px;
+  align-items: center;
+  @media screen and (max-width: $size-l) {
+    margin-top: 87px;
+  }
+
+
+  @media screen and (max-width: $size-s) {
+    width: 100%;
+  }
+
+  .noteWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    @media screen and (max-width: $size-l) {
+      display: none;
+    }
+    .playNow {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 29px;
+      color: $grey-dark;
+    }
+  }
+  .wrapper {
+    overflow: hidden;
+    max-width: 404px;
+    width: 333.7px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.196351);
+    border-radius: 15px;
+    @media screen and (max-width: $size-l) {
+      width: 100%;
+      max-width: none;
+      border-radius: 0;
+    }
+
+  }
+
+  .song {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $light-asphalt;
+    padding: 7px 45px 7px 7px;
+    @media screen and (max-width: $size-l) {
+      display: none;
+    }
+
+    > div {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      max-width: 600px;
+
+      > h3 {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 1.43;
+        color: $grey-dark;
+      }
+      > p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: $blue;
+      }
+    }
+    > img {
+      display: block;
+
+      margin-right: 13px;
+    }
+  }
+  .controllers {
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    margin-right: 35px;
+    & * {
+      fill: white;
+      display: block;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .closeSubtitles {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    border: none;
+    & * {
+      display: block;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .openSubtitles {
+    @extend .closeSubtitles;
+    transform: rotate(180deg);
+  }
+
+  .subtitlesWrapper {
+    position: relative;
+    border-bottom: 1px solid $light-asphalt;
+
+    .subtitleList {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.22;
+      color: $grey-dark;
+      max-width: 218px;
+      margin: 10px auto 0;
+      @media screen and (max-width: $size-l) {
+        color: $white;
+      }
+
+      .subtitleItem {
+        opacity: 0.5;
+        filter: blur(1.35914px);
+        font-weight: 400;
+      }
+
+      :not(:last-child) {
+        margin-bottom: 14px;
+      }
+    }
+    .scrollWrapper {
+      overflow-y: auto;
+      direction: ltr;
+      scrollbar-gutter: stable;
+      scrollbar-color: #d4aa70 #e4e4e4;
+      scrollbar-width: thin;
+      scroll-behavior: smooth;
+      height: 291px;
+    }
+
+    .scrollWrapper::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .scrollWrapper::-webkit-scrollbar-track {
+      background-color: white;
+      border-radius: 2px;
+      @media screen and (max-width: $size-l) {
+        background-color: transparent;
+      }
+    }
+
+    .scrollWrapper::-webkit-scrollbar-thumb {
+      background: rgb(224, 224, 222);
+      mix-blend-mode: normal;
+      opacity: 0.2;
+      border-radius: 2px;
+      @media screen and (max-width: $size-l) {
+        background: $white;
+        height: 47px;
+      }
+    }
+  }
+  .songInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+    padding: 18px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: $grey-dark;
+    background-color: $light-asphalt;
+    :not(:last-child) {
+      // margin-right: 46px;
+    }
+
+    @media screen and (max-width: $size-l) {
+      background: transparent;
+      color: white;
+      padding: 18px 0;
+      & > svg {
+        fill: white;
+      }
+    }
+  }
+  .songInfoBox {
+    display: flex;
+    flex-direction: row;
+    & * {
+      display: block;
+      margin-right: 8px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .likedSong {
+    display: flex;
+    flex-direction: row;
+    & * {
+      display: block;
+      margin-right: 8px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    &:hover {
+      cursor: pointer;
+    }
+    & * {
+      fill: $grey-dark;
+    }
+
+    @media screen and (max-width: $size-l) {
+      background: transparent;
+      color: white;
+      width: 10px;
+      & * {
+        fill: white;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.songActions {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3px;
+  padding: 15px;
+  color: $grey-dark;
+  background-color: $light-asphalt;
+
+  @media screen and (max-width: $size-l) {
+    padding: 15px 0;
+    background-color: transparent;
+    color: white;
+  }
+
+  .songActionsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    text-transform: uppercase;
+
+    & * {
+      display: block;
+      margin-right: 8px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &.note {
+      & > svg {
+        width: 30px;
+        height: 32px;
+      }
+    }
+
+    &.arrowUp {
+      position: relative;
+      & > svg {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        width: 28px;
+        height: 29px;
+      }
+      & > p {
+        margin-left: 30px;
+      }
+    }
+    .songActionsDiscount {
+      font-weight: 500;
+      color: $text-blue;
+      @media screen and (max-width: $size-l) {
+        color: white;
+      }
+    }
+  }
+}
+.currentTime {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: $grey-dark;
+  font-size: 12px;
+  line-height: 1.33;
+  @media screen and (max-width: $size-l) {
+    top: 0px;
+    right: 15px;
+    color: white;
+  }
+}

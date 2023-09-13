@@ -1,0 +1,180 @@
+@import '../../../scss/variables.scss';
+
+.btnWrapper {
+  margin-top: 13px;
+  margin-bottom: 27px;
+  width: 400px;
+  @media (max-width: $size-s) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.regInfo {
+  background: $white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 100%;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 11px;
+  padding-bottom: 17px;
+  > p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-dark;
+    width: 190px;
+    > span {
+      color: $blue;
+      text-transform: uppercase;
+    }
+  }
+  > input {
+    width: 303px;
+    height: 47px;
+    background: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 0 0 10px;
+  }
+  > button {
+    background: $bg-main;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.253844);
+    border-radius: 10px;
+    width: 305px;
+    height: 47px;
+    color: $white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+  }
+}
+.regNft {
+  background: $white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 100%;
+  min-height: 359px;
+  margin: 0 0 20px 0;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .topBlock {
+    display: flex;
+    gap: 20px;
+    .nftWrapper {
+      max-width: 241px;
+      > img {
+        min-width: 204px;
+        min-height: 204px;
+        border-radius: 15px;
+      }
+      .preview {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0 0 0;
+      }
+    }
+    .rightBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
+      .inputWrapper {
+        display: flex;
+        gap: 20px;
+        > input {
+          background: $white;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+          border-radius: 5px;
+          width: 303px;
+          height: 47px;
+          padding: 0 0 0 10px;
+          border: none;
+          outline: none;
+        }
+      }
+      .selectWrapper {
+        display: flex;
+        gap: 20px;
+        > select {
+          background: $white;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+          border-radius: 5px;
+          width: 303px;
+          height: 47px;
+          border: none;
+          outline: none;
+        }
+      }
+      .newTagWrapper {
+        background: $white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+        border-radius: 5px;
+        height: 47px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 20px;
+        > button {
+          width: 80px;
+          height: 23px;
+          background: $blue;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+          > span {
+            color: $white;
+            font-weight: 600;
+            font-size: 11px;
+          }
+        }
+      }
+      > textarea {
+        background: $white;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+        border-radius: 5px;
+        width: 100%;
+        height: 86px;
+        resize: none;
+        border: none;
+        outline: none;
+        padding: 10px;
+      }
+    }
+  }
+  .bottomBlock {
+    display: flex;
+    justify-content: space-between;
+    .informationWrapper {
+      display: flex;
+      gap: 6px;
+      color: $grey-dark;
+      align-items: center;
+    }
+    > button {
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.253844);
+      border-radius: 10px;
+      background-color: $bg-main;
+      color: $white;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      width: 402px;
+      height: 47px;
+      cursor: pointer;
+    }
+  }
+}

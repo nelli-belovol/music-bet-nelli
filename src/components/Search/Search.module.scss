@@ -1,0 +1,34 @@
+@import "../../scss/variables.scss";
+
+.container {
+  position: relative;
+  ::placeholder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-dark;
+    opacity: 0.5;
+  }
+}
+.loupe {
+  position: absolute;
+  top: 11px;
+  left: 22px;
+  @media (max-width: 700px) {
+    top: 12px;
+    // left: 60px;
+  }
+}
+
+.search {
+  border: none;
+  height: 45px;
+  width: 530px;
+  background-color: $white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20334);
+  border-radius: 22.5px;
+  padding-left: 62px;
+  @media (max-width: 700px) {
+    width: 300px;
+  }
+}

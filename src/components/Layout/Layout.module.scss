@@ -1,0 +1,65 @@
+@import '../../scss/variables.scss';
+
+.activeContainer {
+  background: $bg-main;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.container {
+  background: #000035;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-left: 0px;
+    min-height: 100vh;
+    padding-top: 116px;
+  }
+}
+
+.wrapper {
+  background-color: $bg-second;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px 0 20px 20px;
+
+  @media (max-width: 1200px) {
+    padding: 0;
+    border-radius: 20px;
+  }
+}
+
+.userMenu {
+  width: 437px;
+  height: 100vh;
+  border-radius: 0 20px 20px 0;
+}
+.notificationWrapper {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.logoutWrapper {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: 5px;
+  top: 45px;
+  color: white;
+}
+.menuIconOpen {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 45%;
+}

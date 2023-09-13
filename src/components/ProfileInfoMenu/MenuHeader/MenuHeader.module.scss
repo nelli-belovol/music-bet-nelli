@@ -1,0 +1,73 @@
+@import '../../../scss/variables.scss';
+
+.userAvatarSmall {
+  width: 69px;
+  height: 69px;
+  border-radius: 10px;
+}
+.userInfoWrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 16px;
+}
+.arrowDown {
+  cursor: pointer;
+}
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.name {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .userProfile {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.5;
+  }
+  .wallet {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.5;
+  }
+  .walletWrapper {
+    display: flex;
+    border: 0.73399px solid #dddddd;
+    border-radius: 5px;
+    width: 124px;
+    justify-content: space-evenly;
+    height: 26px;
+    align-items: center;
+
+    .tkn {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $blue;
+    }
+  }
+}
+.walletContainer {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nameWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

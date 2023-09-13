@@ -1,0 +1,572 @@
+@import '../../scss/variables.scss';
+
+.songCardItem {
+  max-width: 230px;
+  position: relative;
+}
+
+.songCardItemBefore {
+  z-index: 1 !important;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.252267);
+  font-style: normal;
+  text-align: center;
+  color: white;
+  background-color: white;
+  border-radius: 15px;
+  padding: 9px;
+  box-sizing: border-box;
+  padding: 12px;
+  opacity: 0.65;
+  cursor: default;
+
+  &:hover {
+    opacity: 1;
+  }
+  @media screen and (max-width: $size-m) {
+    padding: 7px;
+  }
+
+  .songContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 15px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    .songContainerFlex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: relative;
+      padding: 5px;
+      margin-bottom: 3px;
+    }
+
+    .centerBox {
+      position: absolute;
+      transform: translate(-50%, 0%);
+      left: 50%;
+      width: 109px;
+      margin: 3px auto 0;
+
+      @media screen and (max-width: $size-m) {
+        width: 78px;
+      }
+      .songPostTotalTime {
+        width: 100%;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue-dark;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 1.21;
+        text-align: center;
+        color: white;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        & > svg {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      .songPostPlay {
+        @extend .songPostTotalTime;
+        padding: 8.5px 40px;
+        &:hover {
+          cursor: pointer;
+        }
+
+        @media screen and (max-width: $size-m) {
+          padding: 8.5px 28px;
+        }
+      }
+
+      .songPostPlayBtn {
+        width: 100%;
+        height: auto;
+
+        border-radius: 15px;
+        background-color: $blue-dark;
+
+        & > svg {
+          width: 29px;
+          height: 34px;
+          display: block;
+        }
+      }
+      .songPostUser {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 1px 5px 5px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 1.67;
+        text-transform: uppercase;
+        background: $blue-dark;
+        opacity: 0.7;
+        margin-top: 3px;
+
+        @media screen and (max-width: $size-m) {
+          padding: 0px 4px;
+          line-height: 1;
+        }
+        .songPostSvg {
+          display: block;
+          margin-right: 8px;
+          fill: $white;
+        }
+      }
+    }
+
+    .songPostPoints {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 24px;
+      height: 100px;
+      padding: 5px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.43;
+      background: $blue-dark;
+      transform: scale(-1);
+      writing-mode: vertical-rl;
+      opacity: 0.7;
+      & > p {
+        margin-top: 8px;
+      }
+      & > .songPostSvg {
+        transform: rotate(180deg);
+        display: block;
+      }
+    }
+
+    .songPostGenre {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 24px;
+      height: 90px;
+      padding: 5px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      background: $blue-dark;
+      transform: scale(-1);
+      writing-mode: vertical-rl;
+      opacity: 0.7;
+
+      & > p {
+        height: auto;
+        margin-top: 8px;
+      }
+      & > .songPostSvg {
+        transform: rotate(180deg);
+        display: block;
+      }
+    }
+  }
+}
+.songInfo {
+  font-weight: 500;
+  color: $grey-dark;
+  font-size: 12px;
+  line-height: 1.25;
+  margin-top: 13px;
+  @media screen and (max-width: $size-m) {
+    font-size: 10px;
+    line-height: 1;
+    margin-top: 9px;
+  }
+
+  .songInfoTitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    opacity: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 22px;
+  }
+  .songInfoSinger {
+    font-size: 14px;
+    line-height: 1.05;
+    opacity: 0.7;
+    margin-top: 7px;
+    overflow: hidden;
+    width: 100%;
+    height: 22px;
+
+    @media screen and (max-width: $size-m) {
+      margin-top: 5px;
+    }
+  }
+  .SongInfoControllers {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 23px;
+    @media screen and (max-width: $size-m) {
+      margin-top: 16px;
+    }
+
+    .songInfoLike {
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .songInfoSvg > svg {
+      color:white;
+      text-shadow:-1px -1px #333;
+    }
+
+    .songInfoSvg:after,
+    .songInfoSvg:before {
+      display: inline-block;
+      margin: auto;
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 9px;
+      left: 17%;
+      border-radius: 100px;
+      background: linear-gradient(135.17deg, #00E476 0.29%, #00B2FD 47.83%, #0074F0 100%);
+      @media screen and (max-width: $size-m) {
+        width: 30px;
+        height: 30px;
+        top: 6px;
+        left: 7px;
+      }
+    }
+
+    .inactiveSongInfo {
+      @extend .songInfoSvg;
+      animation: none !important;
+      -webkit-animation: none !important;
+      -moz-animation: none !important;
+
+      &:after {
+        z-index: -100;
+          animation: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+      }
+
+      &:before {
+        z-index: -200;
+        animation: none !important;
+      -webkit-animation: none !important;
+      -moz-animation: none !important;
+      }
+    }
+
+    .songInfoSvg {
+      width: 59px;
+      height: 59px;
+      margin: 0 auto;
+      display: flex;
+      position:relative;
+      background: linear-gradient(135.17deg, #00E476 0.29%, #00B2FD 47.83%, #0074F0 100%);
+      border-radius: 50%;
+      animation: pulse 2000ms linear infinite;
+      -webkit-animation: pulse 2000ms linear infinite;
+      -moz-animation: pulse 2000ms linear infinite;
+      @media screen and (max-width: $size-m) {
+        width: 42px;
+        height: 42px;
+      }
+
+      &:after {
+        z-index: -100;
+        -webkit-animation: outer-ripple 2000ms linear infinite;
+        -moz-animation: outer-ripple 2000ms linear infinite;
+        animation: outer-ripple 2000ms linear infinite;
+      }
+
+      &:before {
+        z-index: -200;
+        -webkit-animation: inner-ripple 2000ms linear infinite;
+        -moz-animation: inner-ripple 2000ms linear infinite;
+        animation: inner-ripple 2000ms linear infinite;
+      }
+
+      & > svg {
+        width: 59px;
+        height: 59px;
+
+        @media screen and (max-width: $size-m) {
+          width: 42px;
+          height: 42px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      & > * {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    .songInfoSvgActive {
+      bottom: -11px;
+      left: 50%;
+      width: 81px;
+      height: 81px;
+      @media screen and (max-width: $size-m) {
+        width: 61px;
+        height: 61px;
+      }
+      @extend .songInfoSvg;
+    }
+    .songInfoWin {
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+  }
+}
+.containerActive {
+  @extend .container;
+  opacity: 1;
+  z-index: 7;
+
+  animation: pulseBorder 2000ms linear infinite;
+  -webkit-animation: pulseBorder 2000ms linear infinite;
+  -moz-animation: pulseBorder 2000ms linear infinite;
+  background: radial-gradient(
+        circle at 100% 100%,
+        #ffffff 0,
+        #ffffff 12px,
+        transparent 12px
+      )
+      0% 0%/15px 15px no-repeat,
+    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 12px, transparent 12px) 100% 0%/15px
+      15px no-repeat,
+    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 12px, transparent 12px) 0% 100%/15px
+      15px no-repeat,
+    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 12px, transparent 12px) 100% 100%/15px
+      15px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 6px) calc(100% - 30px)
+      no-repeat,
+    linear-gradient(#ffffff, #ffffff) 50% 50% / calc(100% - 30px) calc(100% - 6px)
+      no-repeat,
+    linear-gradient(135.17deg, #00e476 0.29%, #00b2fd 47.83%, #0074f0 100%);
+}
+
+@keyframes pulseBorder {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.7);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.7);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+@keyframes pulse{
+  0% {
+    transform: scale(0.8);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  10% {
+    transform: scale(1.1);
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(0.9);
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+}
+
+@-moz-keyframes pulse{
+  0% {
+    transform: scale(0.8);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  10% {
+    transform: scale(1.1);
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(0.9);
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes pulse{
+  0% {
+    transform: scale(0.8);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  10% {
+    transform: scale(1.1);
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(0.9);
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+}
+
+
+@keyframes outer-ripple {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(3.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(3.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes outer-ripple {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(3.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(3.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes outer-ripple {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(3.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(3.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+/* inner ripple */
+
+@keyframes inner-ripple {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes inner-ripple {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes inner-ripple {
+  0% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+}

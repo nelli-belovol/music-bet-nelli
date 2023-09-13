@@ -1,0 +1,34 @@
+@import "../../../scss/variables.scss";
+
+.image {
+  width: 216px;
+  height: 165px;
+  display: block;
+  border-radius: 15px;
+  margin-right: 14px;
+}
+.title {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.43;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 63px;
+  overflow: hidden;
+  margin-top: 13px;
+}
+.link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  color: $grey-dark;
+  margin-top: 13px;
+  &:hover {
+    color: $blue;
+  }
+}

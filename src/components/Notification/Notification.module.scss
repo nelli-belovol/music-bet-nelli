@@ -1,0 +1,57 @@
+.container{
+    border-radius: 20px;
+    padding: 5px;
+    background-color: white;
+
+	.notificationContainer {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 19px;
+
+
+        @media (max-width: 430px) {
+            padding: 14px;
+            gap: 10px;
+        }
+
+        > div {
+            > img {
+                position: absolute;
+                top: 11px;
+                left: 11px;
+            }
+        }
+        .thropy {
+            background: #00E476;
+            mix-blend-mode: normal;
+            opacity: 0.1;
+            height: 45px;
+            width: 45px;
+            border-radius: 20px;
+
+            > svg {
+                opacity: 1;
+                color: #13CB72;
+                background-color: #13CB72;
+            }
+        }
+
+        .notificationTitle {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2B3134;
+        }
+
+    }
+
+    .breaking {
+        height: 2px;
+        border: 1px solid #F5F8FA
+    }
+    .breaking:last-of-type {
+        display: none;
+    }
+}

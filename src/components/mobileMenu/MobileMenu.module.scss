@@ -1,0 +1,90 @@
+@import "../../scss/variables.scss";
+
+.mobileMenu {
+  display: none;
+  @media (max-width: 1200px) {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+  }
+}
+.mobileNavigationWrapper {
+  width: 100vw;
+  height: 100%;
+  background: url("../../assets/bubbles-mobile-bg.svg"),
+    radial-gradient(52.69% 52.69% at 49.08% 47.62%, #004f80 0%, #000035 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  .iconsWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    .userInfoIconsWrapper {
+      display: flex;
+      gap: 15px;
+    }
+  }
+  .logo {
+    margin-left: 30px;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    span {
+      text-decoration: none;
+      color: $white;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 29px;
+    }
+  }
+  .mainNavigation {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 54px;
+  }
+  .icon {
+    display: block;
+  }
+  .searchWrapper {
+    margin-top: 72px;
+    display: flex;
+    justify-content: center;
+  }
+  .profileNavigation {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 50px;
+  }
+  .navIcons {
+    opacity: 0.4;
+  }
+  .supportWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .linkSupport {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    color: $white;
+  }
+  .iconsLinkWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+}

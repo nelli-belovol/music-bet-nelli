@@ -1,0 +1,72 @@
+@import "../../scss/variables.scss";
+
+.verticalContainer {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  transform: rotate(-90deg);
+
+  top: 43%;
+  left: -42%;
+  color: white;
+  cursor: default;
+  @media screen and (min-width: $size-l) {
+    top: 95px;
+    left: -242px;
+  }
+
+  & > img {
+    display: block;
+    margin-right: 29px;
+  }
+  & > .options {
+    margin-right: 0;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .navigateScroll {
+    width: 41px;
+    height: 41px;
+    fill: white;
+    margin-right: 27px;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    text-transform: uppercase;
+    margin-right: 55px;
+
+    @media screen and (max-width: $size-l) {
+      margin-right: 0;
+    }
+
+    .optionsName {
+      mix-blend-mode: normal;
+      opacity: 0.65;
+    }
+
+    .optionsValue {
+      display: inline-block;
+      width: 87px;
+      border: 1px solid #ffffff;
+      filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.5));
+      padding: 4px;
+      text-align: right;
+      text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+      margin-left: 5px;
+    }
+  }
+}
+
+.verticalContainerLeft {
+  @extend .verticalContainer;
+  left: 180px;
+}

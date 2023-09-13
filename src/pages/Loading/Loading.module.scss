@@ -1,0 +1,17 @@
+.container {
+  background-image: url('../../../public/image/loading/bg-loading.svg');
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .icon {
+    position: absolute;
+    width: 123.8px;
+    height: 183.64px;
+    left: 898.07px;
+    top: 376px;
+  }
+}

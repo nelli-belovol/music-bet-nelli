@@ -1,0 +1,144 @@
+@import '../../scss/variables.scss';
+
+.container {
+  padding: 0 20px;
+  height: 70px;
+
+  @media (max-width: $size-s) {
+    height: fit-content;
+    padding-bottom: 10px;
+    padding-left: 0px;
+  }
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  color: $grey-dark;
+  &:hover {
+    background-color: $white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+  }
+
+  .contentContainer {
+    width: 100%;
+    display: none;
+    align-items: baseline;
+
+    .userInfo {
+      display: flex;
+      flex-direction: row;
+
+      > article {
+        > p {
+          width: fit-content;
+        }
+      }
+    }
+    @media (max-width: $size-s) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .image {
+    // width: 60px !important;
+    // height: auto;
+    display: block;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+
+  .playerBtn {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  .index {
+    width: 34px;
+    font-size: 21px;
+    line-height: 26px;
+    margin-right: 21px;
+
+    @media (max-width: $size-s) {
+      width: auto;
+      margin-right: 5px;
+    }
+  }
+
+  .modalPlay {
+    > div {
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  .soundArtistWrapper {
+    display: flex;
+    flex-direction: column;
+    // width: 250px;
+
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 336px;
+
+
+    }
+    .singer {
+      font-size: 14px;
+      line-height: 20px;
+      opacity: 0.6;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .infoElementWrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    .username {
+      @extend .text;
+      width: 151px;
+    }
+    .points {
+      @extend .text;
+      width: 124px;
+    }
+    .tokens {
+      @extend .text;
+      width: 133px;
+    }
+    .text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .icon * {
+    fill: $grey-dark;
+    display: block;
+    opacity: 0.8;
+    padding-right: 11px;
+  }
+  .menuWrapper {
+    position: relative;
+    .more {
+      margin-left: 0;
+      cursor: pointer;
+    }
+    .modalWrapper {
+      position: absolute;
+      left: -200px;
+      top: 20px;
+    }
+  }
+}

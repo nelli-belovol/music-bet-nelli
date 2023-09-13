@@ -1,0 +1,349 @@
+@import '../../scss/variables.scss';
+
+.bgWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.bgTop {
+  background: radial-gradient(52.69% 52.69% at 49.08% 47.62%, #004f80 0%, #000035 100%);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.imagesBg {
+  background: url('../../assets/bubbles.svg');
+  position: absolute;
+  width: 100vw;
+  height: 200vh;
+}
+
+.ph {
+  position: absolute;
+  max-width: 1576px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  @media (max-width: 1000px) {
+    margin-top: 240px;
+  }
+  @media (max-width: 900px) {
+    margin-top: 300px;
+  }
+  @media (max-width: 700px) {
+    margin-top: 400px;
+  }
+  @media (max-width: $size-s) {
+    margin-top: 466px;
+    width: 450px;
+  }
+}
+.containerWrapper {
+  background-color: $bg-main;
+  width: 100vw;
+  z-index: 10;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  color: $white;
+  text-align: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 33px 52px 0 55px;
+    @media (max-width: 620px) {
+      display: none;
+    }
+  }
+
+  .tv {
+    margin-top: 203px;
+    max-width: 80%;
+    @media (max-width: $size-s) {
+      width: 327px;
+      margin-top: 130px;
+    }
+  }
+  .headerSecondAsphalt {
+    margin-top: 175px;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 88px;
+    letter-spacing: -0.225px;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    @media (max-width: 595px) {
+      margin-top: 90px;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      ont-style: normal;
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  .headerSecondWhite {
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 88px;
+    letter-spacing: -0.225px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    @media (max-width: 595px) {
+      margin-top: 17px;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      ont-style: normal;
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  .text {
+    margin: 31px auto 0 auto;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+    width: 606px;
+    letter-spacing: -0.065625px;
+    @media (max-width: 595px) {
+      width: 276px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 33px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  //! top-card-wrapper==============
+  .textWrapper {
+    height: 17px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    width: 242px;
+    transform: rotate(-90deg);
+    margin-top: 105px;
+    margin-right: -105px;
+    @media (max-width: 1160px) {
+      position: absolute;
+      transform: rotate(360deg);
+      left: 330px;
+      top: -130px;
+      margin-right: 0;
+    }
+    @media (max-width: 595px) {
+      position: absolute;
+      transform: rotate(360deg);
+      left: 140px;
+      top: -130px;
+      margin-right: 0;
+    }
+    .exp {
+      opacity: 0.65;
+      margin-left: 30px;
+    }
+    .time {
+      box-sizing: border-box;
+      border: 1px solid $white;
+    }
+    .battle {
+      opacity: 0.65;
+    }
+    .mus {
+      margin-left: 20px;
+    }
+  }
+
+  .cardWrapper {
+    margin-top: 105px;
+    justify-content: center;
+    display: flex;
+    @media (max-width: 1160px) {
+      margin-left: 105px;
+    }
+
+    .pathIcon {
+      margin: -10px;
+      @media (max-width: 595px) {
+        width: 20px;
+        margin-left: -20px;
+      }
+    }
+    .firstCard {
+      margin-right: 290px;
+      margin-top: -10px;
+      @media (max-width: 595px) {
+        height: 235px;
+        width: 185px;
+        margin-right: 220px;
+      }
+    }
+    .activeCard {
+      @media (max-width: 595px) {
+        height: 235px;
+        width: 185px;
+      }
+    }
+    .secondCard {
+      margin-right: 105px;
+      @media (max-width: 595px) {
+        height: 230px;
+        width: 180px;
+        margin-right: 120px;
+      }
+    }
+  }
+}
+
+//! end-card-wrapper ==============
+.logoSymbol {
+  width: 136px;
+  height: 203px;
+  margin: 102px 0 51px 0;
+  @media (max-width: 595px) {
+    width: 120px;
+    margin-top: 36px;
+    width: 81px;
+  }
+}
+.logoDescription {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 56px;
+  text-align: center;
+  width: 614px;
+  height: 112px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0 auto 91px auto;
+  @media (max-width: 595px) {
+    width: 300px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 56px;
+    margin-bottom: 130px;
+    margin-top: -35px;
+  }
+}
+
+.arrowTopWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrowTop {
+    margin-left: 170px;
+    height: 134px;
+    width: 113px;
+    @media (max-width: 595px) {
+      height: 50px;
+      width: 60px;
+      margin-left: 80px;
+      margin-top: -40px;
+    }
+  }
+}
+.arrowText {
+  width: 334px;
+  height: 78px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  @media (max-width: 595px) {
+    font-size: 20px;
+  }
+}
+
+.middleCardWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+}
+.visibleCard {
+  @media (max-width: 1160px) {
+    display: none;
+  }
+}
+.relativeBlock {
+  position: relative;
+}
+.arrowBtnWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 43px 250px;
+  @media (max-width: 1160px) {
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 595px) {
+    height: 50px;
+    width: 300px;
+    margin-bottom: 100px;
+  }
+}
+.cardSize {
+  @media (max-width: 595px) {
+    height: 230px;
+    width: 160px;
+  }
+}
+.preFooter {
+  background: url('../../assets/footer-bg.svg'),
+    linear-gradient(135.4deg, #00b2fd -37.01%, #0074f0 -19.23%, #000035 100%);
+  height: 386px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
+  .preFooterTitle {
+    width: 592px;
+    height: 102px;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 51px;
+    letter-spacing: -0.13125px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 47px;
+    @media (max-width: 600px) {
+      font-size: 30px;
+      line-height: 37px;
+      text-align: center;
+      letter-spacing: -0.09375px;
+      width: 335px;
+      height: 74px;
+    }
+  }
+}
+
+.menuIconOpen {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 9;
+  cursor: pointer;
+}
+.logoPosition {
+  position: absolute;
+  z-index: 9;
+  top: 10px;
+  left: 20px;
+}
+

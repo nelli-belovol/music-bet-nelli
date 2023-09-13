@@ -1,0 +1,130 @@
+@import '../../scss/variables.scss';
+
+.container {
+  padding: 20px 20px 100px 20px;
+
+  @media (max-width: $size-s) {
+    padding-bottom: 190px;
+  }
+  .bgMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 24px;
+    color: $white;
+    background-image: url('./bgGlobal.svg');
+    background-color: $blue-dark;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 42px 94px 36px 34px;
+
+    @media (max-width: $size-m) {
+      flex-direction: column;
+      align-items: center;
+      padding: 13px 24px;
+      background-image: url('./bg-mobile.svg');
+      text-align: center;
+    }
+
+    .wrapperLeft {
+      display: flex;
+      flex-direction: column;
+      max-width: 430px;
+      @media (max-width: $size-m) {
+        align-items: center;
+      }
+
+      & > h2 {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 1.21;
+        letter-spacing: -0.13125px;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      & > p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 26px;
+      }
+
+      & > button {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.25;
+        text-align: center;
+        letter-spacing: -0.05px;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        color: $white;
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 13px 51px;
+        margin-top: 34px;
+        cursor: pointer;
+      }
+    }
+
+    .wrapperRight {
+      display: flex;
+      flex-direction: column;
+      max-width: 430px;
+      padding-top: 30px;
+      margin-left: 20px;
+      @media (max-width: $size-m) {
+        margin-left: 0px;
+      }
+      & > h2 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.21;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 36px;
+      }
+      .wrapperQuery {
+        width: 100%;
+        padding-left: 40px;
+
+        @media (max-width: $size-m) {
+          padding-left: 0px;
+        }
+        & > input {
+          width: 100%;
+          border-radius: 10px;
+          outline: none;
+          padding: 13px 16px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.25;
+          color: #000035;
+          opacity: 0.5;
+          border-color: transparent;
+          &:focus {
+            opacity: 1;
+          }
+          &:not(:last-child) {
+            margin-bottom: 18px;
+          }
+        }
+
+        & > button {
+          width: 100%;
+          height: 46px;
+          margin-top: 30px;
+
+          & > span {
+            margin-left: 0;
+          }
+
+          & > div {
+            top: 23%;
+            left: 60%;
+          }
+        }
+      }
+    }
+  }
+}

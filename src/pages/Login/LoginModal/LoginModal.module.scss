@@ -1,0 +1,19 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  @media screen and (max-width: 430px) {
+    display: block;
+  }
+  position: fixed;
+  z-index: 99;
+  background: linear-gradient(135.17deg, #002068 0.29%, #000035 100%);
+  .cross {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    fill: black;
+  }
+}

@@ -1,0 +1,128 @@
+@import '../../scss/variables.scss';
+
+.container {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  align-items: center;
+  color: $placeholder;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+
+  .goToBattleButton{
+
+    border: 1.28136px solid #0074F0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10.5px 3.5px;
+    background-color: white;
+    color: #0074F0;
+  }
+
+  .orderPlay {
+    .order {
+      height: 26px;
+      font-weight: 400;
+      padding-left: 13px;
+      padding-right: 11px;
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+  .image {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      height: 20px;
+      width: 180px;
+      overflow: hidden;
+    }
+    .artist {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      opacity: 0.6;
+      height: 20px;
+      width: 180px;
+      overflow: hidden;
+    }
+  }
+  .pointsWrapper {
+    display: flex;
+    @media (max-width: 1050px) {
+      display: none;
+    }
+    .shape {
+      width: 15px;
+      height: 15px;
+      margin: 2px 5px 0 0;
+    }
+    .points {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .starWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 1050px) {
+      display: none;
+    }
+    .star {
+      width: 16px;
+      height: 15px;
+      margin: 0 5px 2px 0;
+    }
+    .count {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .more {
+    cursor: pointer;
+  }
+  .menuMixed {
+    @media (max-width: $size-s) {
+      display: none;
+    }
+    width: 170px;
+    height: 39px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $grey-dark;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(212, 207, 207);
+  }
+  .battleBtn {
+    width: 144px;
+    height: 39px;
+    border: 1.28136px solid $text-blue;
+    color: $text-blue;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

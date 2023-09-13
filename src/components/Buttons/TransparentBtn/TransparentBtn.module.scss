@@ -1,0 +1,26 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  cursor: pointer;
+  border: 3px solid $white;
+  border-radius: 13.5556px;
+  width: 283px;
+  height: 62px;
+  background-color: transparent;
+  @media (max-width: $size-s) {
+    width: auto;
+    height: auto;
+    padding: 13px;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.05px;
+    color: $white;
+    @media (max-width: $size-s) {
+      margin-left: 10px;
+    }
+  }
+}

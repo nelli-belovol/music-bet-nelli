@@ -1,0 +1,240 @@
+@import '../../../scss/variables.scss';
+
+.container {
+  display: flex;
+  gap: 10px;
+
+  @media screen and (max-width: $size-l) {
+    flex-direction: column;
+  }
+}
+.cardWrapper {
+  width: 438px;
+  padding-bottom: 20px;
+  
+  @media screen and (max-width: $size-l) {
+    width: fit-content;
+  }
+
+  @media screen and (max-width: 370px) {
+    width: 360px;
+  }
+  // height: 360px;
+  background: $white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.20091);
+  border-radius: 15px;
+  .title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $grey-dark;
+    margin: 16px 0 13px 20px;
+  }
+  .line {
+    height: 4px;
+    width: 421px;
+    background-color: $bg-second;
+    border: none;
+    margin-left: 8px;
+    margin-bottom: 15px;
+  }
+}
+.buttonWrapper {
+  display: flex;
+  gap: 16px;
+}
+.cardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: $white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+  border-radius: 5px;
+  width: 55px;
+  height: 32px;
+  border: none;
+  .imageCard {
+    display: block;
+  }
+}
+.wrapperField {
+  display: flex;
+  flex-direction: column;
+}
+.star {
+  color: $light-blue;
+}
+.label {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: $grey-dark;
+}
+.input {
+  background: $white;
+  mix-blend-mode: normal;
+  border: 1px solid rgba($blue, 0.2);
+  border-radius: 5px;
+  height: 32px;
+  padding-left: 15px;
+}
+.cardButtonActive {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 55px;
+  height: 32px;
+  border: none;
+  background: rgba(0, 116, 240, 0.0977553);
+  border: 1px solid $blue;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+  border-radius: 5px;
+}
+.cardholderName {
+  width: 402px;
+}
+.check {
+  position: absolute;
+  top: -9px;
+  left: 48px;
+}
+.secondInputsWrapper {
+  display: flex;
+  gap: 14px;
+}
+.inp {
+  width: 69px;
+}
+.crdNum {
+  width: 234px;
+}
+.checkWrapper {
+  display: flex;
+  gap: 12px;
+}
+.alert {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $grey-dark;
+  opacity: 0.5;
+}
+.saveCheckText {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $grey-dark;
+}
+.tknBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: $white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+  border-radius: 5px;
+  width: 120px;
+  height: 32px;
+
+  @media screen and (max-width: $size-l) {
+    width: 90px;
+  }
+  border: none;
+}
+.tknBtnActive {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 120px;
+  height: 32px;
+  border: none;
+
+  @media screen and (max-width: $size-l) {
+    width: 90px;
+  }
+  background: rgba(0, 116, 240, 0.0977553);
+  border: 1px solid $blue;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20077);
+  border-radius: 5px;
+}
+.checkTkn {
+  position: absolute;
+  top: -9px;
+  left: 114px;
+
+  @media screen and (max-width: $size-l) {
+    left: 84px;
+  }
+}
+.tknBtnWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 21px;
+  grid-row-gap: 13px;
+}
+.btnConfirm {
+  background: $bg-main;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.253844);
+  border-radius: 10px;
+  width: 402px;
+  height: 46px;
+  margin-left: 5px;
+  cursor: pointer;
+  span {
+    color: $white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.05px;
+  }
+
+  @media screen and (max-width: 370px) {
+    width: 95%;
+  }
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 20px;
+}
+.infoTknWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.wrapperSecondCard {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 22px;
+}
+.amountInput {
+  width: 387px;
+  margin-left: 5px;
+
+  @media screen and (max-width: 370px) {
+    width: 83%;
+  }
+}
+.isChecked {
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid $grey-dark;
+}
+.iconChecked {
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+}

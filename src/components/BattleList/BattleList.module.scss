@@ -1,0 +1,244 @@
+@import "../../scss/variables.scss";
+
+.battle {
+  position: relative;
+  @media screen and (max-width: $size-m) {
+    max-width: 373px;
+  }
+
+  @media screen and (max-width: 370px) {
+    max-width: 360px;
+  }
+}
+.songBattleListFirst {
+  position: relative;
+  display: grid;
+  grid-row-gap: 20px;
+  margin: 0 auto;
+  width: 518px;
+  @media screen and (max-width: $size-m) {
+    max-width: 373px;
+  }
+
+  @media screen and (max-width: 370px) {
+    max-width: 360px;
+    grid-row-gap: 10px !important;
+  }
+}
+
+.songBattleListSecond {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+
+  @media screen and (max-width: $size-m) {
+    max-width: 373px;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    // padding-bottom: 580px;
+  }
+
+  @media screen and (max-width: 370px) {
+    max-width: 360px;
+  }
+}
+
+.songBattleListThird {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 20px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $size-m) {
+    max-width: 373px;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    // padding-bottom: 580px;
+  }
+
+  @media screen and (max-width: 370px) {
+    max-width: 360px;
+  }
+}
+
+.songListFirst {
+  display: grid;
+  grid-template-columns: repeat(2, 238px);
+  grid-column-gap: 40px;
+
+  @media screen and (max-width: 370px) {
+    grid-column-gap: 20px !important;
+  }
+  & > li:nth-child(odd):after {
+    position: absolute;
+    display: block;
+    // content: url("../../assets/svg/zipper.svg");
+    top: 40%;
+    left: 102%;
+    @media screen and (max-width: $size-m) {
+      // left: 47%;
+    }
+  }
+  @media screen and (max-width: $size-m) {
+    grid-template-columns: repeat(2, 169px);
+    grid-column-gap: 29px;
+    grid-row-gap: 0px;
+  }
+}
+
+.songListSecond {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-left: 10px;
+  gap: 10px;
+  // display: grid;
+  // grid-template-columns: repeat(4, 238px);
+  // grid-column-gap: 26px;
+  // grid-row-gap: 20px;
+
+  > li {
+    margin-bottom: 20px;
+    flex: 44%;
+  }
+
+  // margin: 0 auto;
+  padding: 10px;
+  // width: 830px;
+  // overflow-x: scroll;
+  direction: ltr;
+  scrollbar-gutter: stable;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  cursor: pointer;
+
+  &::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(224, 224, 222);
+    mix-blend-mode: normal;
+    opacity: 0.2;
+    border-radius: 2px;
+  }
+
+  & > li:after {
+    display: none;
+  }
+
+  @media (min-width: $size-m) {
+    & > li:nth-child(-n + 3):after {
+      position: absolute;
+      display: block;
+      // content: url("../../assets/svg/zipper.svg");
+      top: 40%;
+      left: 101%;
+    }
+  }
+  @media (max-width: $size-m) {
+    width: 100%;
+    overflow-x: unset;
+    @mixin transition {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          width: 172px;
+          height: 256px;
+          // margin-left: -($i - 1) * 211 + px;
+          z-index: (8 - $i - 1);
+          opacity: 1;
+        }
+      }
+    }
+    li {
+      @include transition;
+    }
+  }
+}
+
+.songListThird {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-left: 10px;
+  gap: 10px;
+  // display: grid;
+  // grid-template-columns: repeat(4, 238px);
+  // grid-column-gap: 26px;
+  // grid-row-gap: 20px;
+  margin: 0 auto;
+  // width: 830px;
+  overflow-x: unset;
+  scrollbar-gutter: stable;
+  scrollbar-color: #d4aa70 #e4e4e4;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  cursor: pointer;
+
+  &::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(224, 224, 222);
+    mix-blend-mode: normal;
+    opacity: 0.2;
+    border-radius: 2px;
+  }
+  & > li:after {
+    display: none;
+  }
+
+  > li {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $size-m) {
+    grid-template-columns: repeat(4, 238px);
+    width: 1000px;
+    & > li:nth-child(-n + 3):after {
+      position: absolute;
+      display: block;
+      // content: url("../../assets/svg/zipper.svg");
+      top: 100%;
+      right: -11%;
+    }
+  }
+
+  @media screen and (max-width: $size-m) {
+    grid-template-columns: repeat(8, 238px);
+    width: 100%;
+    overflow-x: unset;
+    @mixin transition {
+      @for $i from 1 through 8 {
+        &:nth-child(#{$i}) {
+          width: 165px;
+          height: 256px;
+          // margin-left: -($i - 1) * 235 + px;
+          z-index: (8 - ($i - 1));
+          opacity: 1;
+        }
+      }
+    }
+    li {
+      @include transition;
+    }
+  }
+}
