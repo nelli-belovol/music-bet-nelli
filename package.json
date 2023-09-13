@@ -1,7 +1,8 @@
 {
-  "name": "music-bet",
+  "name": "music-bet-nelli",
   "version": "0.1.0",
   "private": true,
+	  "homepage": "https://nelli-belovol.github.io/music-bet-nelli",
   "dependencies": {
     "@react-oauth/google": "^0.2.8",
     "@reduxjs/toolkit": "^1.8.5",
@@ -41,6 +42,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+		"predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
